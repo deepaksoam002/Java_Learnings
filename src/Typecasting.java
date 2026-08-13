@@ -58,5 +58,31 @@ public class Typecasting {
         */
 
 
+
+        // Automatic Type Promotion
+        byte e = 30;
+        byte g;
+        g= (byte)(e * 5);  // here java promote e in int  then output will be int type so we do narrowing type casting
+        System.out.println(g);
+
+        byte j = 55;
+        short k = 40;
+        int l = 100;
+        long o = 3000L;
+        float p = 12.25f;
+        double r = 1668.1234;
+
+        System.out.println((k-p)+"+"+(l-j)+"-"+(o-r));
+        //short - float = float;
+        //int - byte = int;
+        //long - double = double;
+
+        //float + int = float;
+        //float - double = double;
+
+        double result = ((k-p)+(l-j)-(o-r));
+        System.out.println("result :"+ result);
+
+
     }
 }
