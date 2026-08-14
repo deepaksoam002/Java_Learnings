@@ -52,10 +52,13 @@ public class Switch {
         switch(c){
             case 1:
                 System.out.println( (y+=10));
+                break;
             case 200:
                 System.out.println( (y+=20));
+                break;
             case 900:
                 System.out.println( (y+=5));  // y=15   and as we did not break that why to move to next case
+                break;
             case 3000:
                 System.out.println( (y+=10)); // y=25 and it also print y=y+10  and then break;
                 break;
@@ -68,5 +71,29 @@ public class Switch {
         // in this case java simple use lookup table then with the help of binary search
         // and find c=200 case
         // here time complexity will be O(logn)
+
+        // Java also provide support to nested switch statement
+
+        int n = 2;
+        int m = 20;
+        int o = 1;
+
+        switch(n){
+            case 1:
+                System.out.println((m-=5));
+                break;
+            case 2:
+                switch(o){
+                    case 1:
+                        System.out.println("nested switch:"+(m+=10));
+                        break;
+                    default:
+                        System.out.println("wrong nested case choose");
+                }
+                break;
+            default:
+                System.out.println("Wrong case choose")
+;        }
+
     }
 }
