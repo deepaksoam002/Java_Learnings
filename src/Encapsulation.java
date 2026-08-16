@@ -3,8 +3,7 @@ public class Encapsulation {
 
     public static void main(String[] args){
 
-        Product pen = new Product();
-        pen.setProductDetails("Doms Inxify Plus", 6,20);
+        Product pen = new Product("Doms Inxify Plus", 6,20);
         pen.getProductDetails();
         pen.addToCart(6);
 
@@ -22,17 +21,11 @@ class Product{
     private int productPrice;
     private int productAvailableStock;
 
-    public void setProductDetails(String name, int price, int stock){
-
-        if(name == null || price<0 || stock <= 0 ){
-
-            System.out.println("All field are required");
-        }else {
-            productName = name;
-            productPrice = price;
-            productAvailableStock = stock;
-        }
-    };
+    Product(String productName, int productPrice, int productAvailableStock){
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productAvailableStock = productAvailableStock;
+    }
 
     public void getProductDetails(){
         System.out.println("Product Name :" + productName);
